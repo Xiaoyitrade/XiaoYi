@@ -1,21 +1,4 @@
-### [Astro产品介绍](./README.md) 
-### [Astro安装教程](./INSTALL.md) 
-### [Astro常见问题](./Docs/常见问题.md) 
-### [Astro安全相关-必读](./SECURITY.md) 
-
-套利策略，产品使用群 \
-https://t.me/astro_discuss
-
-行情工具 \
-https://pulse.astro-btc.xyz/ \
-https://astro-btc.github.io/Astro-Perps/?coin=ETH
-
-实时资讯, 上新，费率调整等 \
-https://t.me/astro_realtime_news
-
---------------------------------
-
-# Astro - 安装教程
+# XiaoYi - 安装教程
 
 ### 1. 云服务器要求
 切记不可以使用中国境内服务器，推荐阿里云，亚马逊云香港，日本地区 \
@@ -30,7 +13,7 @@ https://t.me/astro_realtime_news
 curl -L https://raw.githubusercontent.com/Xiaoyitrade/XiaoYi/refs/heads/main/install-with-docker.sh | sudo bash -
 ```
 
-### 3. astro-server/.env 文件字段说明
+### 3. 配置文件字段说明
 
 | **配置项**               | **说明**                                                        |
 |--------------------------|-----------------------------------------------------------------|
