@@ -483,8 +483,6 @@ EOF
     export ADMIN_JWT_EXPIRESIN="240h"
     export CHANNEL_ID="$CHANNEL_ID"
     
-    log_info "配置文件已保存到: astro-server/.env"
-    
     # 停止并删除旧容器（如果存在）
     log_info "清理旧容器..."
     docker stop astro-app 2>/dev/null || true
