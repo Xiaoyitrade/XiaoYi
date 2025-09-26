@@ -467,7 +467,7 @@ main() {
 PORT=12345
 ALLOWED_DOMAIN=$SERVER_IP
 ADMIN_PREFIX=$ADMIN_PREFIX
-ADMIN_SECURITY_CODE=Astro321@
+ADMIN_SECURITY_CODE=XiaoYi321@
 ADMIN_2FA_SECRET=$ADMIN_2FA_SECRET
 ADMIN_JWT_SECRET=$ADMIN_JWT_SECRET
 ADMIN_JWT_EXPIRESIN=240h
@@ -478,7 +478,7 @@ EOF
     export PORT=12345
     export ALLOWED_DOMAIN="$SERVER_IP"
     export ADMIN_PREFIX="$ADMIN_PREFIX"
-    export ADMIN_SECURITY_CODE="Astro321@"
+    export ADMIN_SECURITY_CODE="XiaoYi321@"
     export ADMIN_2FA_SECRET="$ADMIN_2FA_SECRET"
     export ADMIN_JWT_SECRET="$ADMIN_JWT_SECRET"
     export ADMIN_JWT_EXPIRESIN="240h"
@@ -577,7 +577,6 @@ EOF
     echo -e "   🌐 访问地址: ${GREEN}https://$SERVER_IP:$PORT/$ADMIN_PREFIX${NC}"
     echo -e "   🔑 密  码: ${YELLOW}$ADMIN_SECURITY_CODE${NC}"
     echo -e "   📱 2FA密钥: ${YELLOW}$ADMIN_2FA_SECRET${NC}"
-    echo -e "   📁 配置文件: ${GREEN}$(pwd)/astro-server/.env${NC}"
     echo ""
 
     # 显示二维码
