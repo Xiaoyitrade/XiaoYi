@@ -14,7 +14,7 @@ NC='\033[0m' # No Color
 
 # 日志函数
 log_info() {
-    echo -e "${GREEN}[ASTRO-INSTALL]${NC} $1"
+    echo -e "${GREEN}[XIAOYI-INSTALL]${NC} $1"
 }
 
 # 验证channel参数（纯数字且长度<24字节）
@@ -76,11 +76,11 @@ parse_channel_from_args() {
 }
 
 log_warn() {
-    echo -e "${YELLOW}[ASTRO-INSTALL]${NC} $1"
+    echo -e "${YELLOW}[XIAOYI-INSTALL]${NC} $1"
 }
 
 log_error() {
-    echo -e "${RED}[ASTRO-INSTALL]${NC} $1"
+    echo -e "${RED}[XIAOYI-INSTALL]${NC} $1"
 }
 
 # 检查是否为root用户
@@ -280,10 +280,10 @@ get_server_ip() {
     auto_ip=$(curl -s https://api.ipify.org || true)
     
     if validate_ip "$auto_ip"; then
-        echo "----> [ASTRO-INSTALL] Detected public IP: $auto_ip" > /dev/tty
+        echo "----> [XIAOYI-INSTALL] Detected public IP: $auto_ip" > /dev/tty
         
         # 询问是否使用自动获取的IP
-        read -p $'\n----> [ASTRO-INSTALL] Use this IP? [Y/n] ' confirm < /dev/tty
+        read -p $'\n----> [XIAOYI-INSTALL] Use this IP? [Y/n] ' confirm < /dev/tty
         if [[ -z "$confirm" || "$confirm" =~ ^[Yy] ]]; then
             SERVER_IP="$auto_ip"
             return
@@ -292,7 +292,7 @@ get_server_ip() {
     
     # 手动输入
     while true; do
-        echo -e "\n----> [ASTRO-INSTALL] Please enter your server's public IP address" > /dev/tty
+        echo -e "\n----> [XIAOYI-INSTALL] Please enter your server's public IP address" > /dev/tty
         read -p "IP: " SERVER_IP < /dev/tty
         
         if validate_ip "$SERVER_IP"; then
@@ -383,7 +383,6 @@ verify_restart_configuration() {
     # 验证配置文件
     if [ -f "astro-server/.env" ]; then
         log_info "配置文件已创建 ✓"
-        log_info "配置文件位置: $(pwd)/astro-server/.env"
     else
         log_warn "配置文件未找到"
     fi
@@ -431,7 +430,7 @@ main() {
     install_qrencode
     
     # 获取服务器IP
-    echo "----> [ASTRO-INSTALL] Starting XiaoYi installation..." > /dev/tty
+    echo "----> [XIAOYI-INSTALL] Starting XiaoYi installation..." > /dev/tty
     get_server_ip
     
     # 解析 channel 参数（优先脚本参数，其次环境变量）
