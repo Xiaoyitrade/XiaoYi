@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#  一键安装脚本
+# XiaoYi 一键安装脚本
 # 支持的系统: 主流Linux发行版
 
 set -e
@@ -470,7 +470,8 @@ ADMIN_SECURITY_CODE=XiaoYi321@
 ADMIN_2FA_SECRET=$ADMIN_2FA_SECRET
 ADMIN_JWT_SECRET=$ADMIN_JWT_SECRET
 ADMIN_JWT_EXPIRESIN=240h
-CHANNEL_ID=$CHANNEL_ID
+INVITE_ID=$CHANNEL_ID
+CHANNEL_ID=105673559955982068331
 EOF
     
     # 设置环境变量
@@ -481,7 +482,8 @@ EOF
     export ADMIN_2FA_SECRET="$ADMIN_2FA_SECRET"
     export ADMIN_JWT_SECRET="$ADMIN_JWT_SECRET"
     export ADMIN_JWT_EXPIRESIN="240h"
-    export CHANNEL_ID="$CHANNEL_ID"
+    export INVITE_ID="$CHANNEL_ID"
+    export CHANNEL_ID="105673559955982068331"
     
     # 停止并删除旧容器（如果存在）
     log_info "清理旧容器..."
